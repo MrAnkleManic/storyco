@@ -285,13 +285,17 @@ section + section {
   }
 
   .hero-logo-overlay {
-    width: 70vw;
-    top: 28%;
-    transform: translate(-50%, -50%);
+    width: 60vw;
+    top: 15%;
+    transform: translate(-50%, 0);
   }
 
   .hero-gradient-left {
-    background: linear-gradient(to right, rgba(10, 10, 10, 0.7) 0%, transparent 90%);
+    background: none;
+  }
+
+  .hero-gradient-bottom {
+    background: linear-gradient(to top, var(--color-bg) 0%, rgba(10, 10, 10, 0.6) 50%, transparent 100%);
   }
 
   .hero-headline {
