@@ -281,13 +281,15 @@ section + section {
   }
 
   .hero-bg img {
-    object-position: 35% center;
+    object-position: center top;
   }
 
   .hero-logo-overlay {
     width: 60vw;
-    top: 15%;
-    transform: translate(-50%, 0);
+    top: 12%;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
 
   .hero-gradient-left {
@@ -295,7 +297,7 @@ section + section {
   }
 
   .hero-gradient-bottom {
-    background: linear-gradient(to top, var(--color-bg) 0%, rgba(10, 10, 10, 0.6) 50%, transparent 100%);
+    background: linear-gradient(to top, var(--color-bg) 0%, rgba(10, 10, 10, 0.3) 45%, transparent 100%);
   }
 
   .hero-headline {
