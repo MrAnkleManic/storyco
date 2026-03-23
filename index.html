@@ -29,12 +29,24 @@
 
   <!-- ─── Hero ─── -->
   <section class="hero">
-    <picture class="hero-banner">
-      <source media="(max-width: 768px)" srcset="artwork/banner-mobile.jpg">
-      <img src="artwork/banner-desktop.jpg" alt="StoryCo with James Kirkham" width="1600" height="400" loading="eager">
-    </picture>
-    <div class="hero-overlay">
+    <!-- Photo layer -->
+    <div class="hero-bg">
+      <picture>
+        <source media="(max-width: 768px)" srcset="artwork/hero-photo-mobile.jpg">
+        <img src="artwork/hero-photo-desktop.jpg" alt="" width="1600" height="400" loading="eager">
+      </picture>
+    </div>
+    <!-- Text overlay layer (logo + name) -->
+    <img src="artwork/hero-text-overlay.png" alt="StoryCo with James Kirkham" class="hero-logo-overlay" loading="eager">
+    <!-- Gradient overlays -->
+    <div class="hero-gradient-bottom"></div>
+    <div class="hero-gradient-left"></div>
+    <!-- Accent glow -->
+    <div class="hero-glow"></div>
+    <!-- Content -->
+    <div class="hero-content-wrap">
       <div class="container">
+        <h1 class="hero-headline">The defining currency <em>of the modern economy.</em></h1>
         <p class="hero-premise">In an age where our machines can make almost anything, the most valuable thing left is the oldest human instinct. StoryCo meets the people proving that story isn't a soft skill — it's the defining currency of the modern economy.</p>
         <div class="hero-cta">
           <a href="#subscribe" class="btn btn-primary">
@@ -109,46 +121,40 @@
     </div>
   </section>
 
-  <!-- ─── Latest Episodes ─── -->
-  <section class="fade-in">
+  <!-- ─── Latest Episodes (Bento Grid) ─── -->
+  <section class="fade-in episodes-bento-section">
     <div class="container">
-      <div class="section-header">
-        <p class="label">Latest</p>
-        <h2>Recent Episodes</h2>
+      <div class="section-header section-header-row">
+        <div>
+          <p class="label">Season One</p>
+          <h2>Episodes</h2>
+        </div>
+        <a href="episodes.html" class="label episodes-all-link">Explore all episodes &rarr;</a>
       </div>
-      <div class="episodes-grid">
-        <div class="episode-card">
-          <span class="episode-number">01</span>
-          <div class="episode-info">
-            <h3><a href="episodes.html">The Man Who Cracked the Code of Story</a></h3>
-            <p class="episode-guest">with John Yorke</p>
-            <p class="episode-desc">The former BBC drama chief and author of <em>Into the Woods</em> reveals why every story ever told follows the same hidden structure &mdash; and what that means for anyone trying to communicate anything.</p>
+      <div class="bento-grid">
+        <!-- Featured episode (large) -->
+        <a href="episodes.html" class="bento-featured">
+          <div class="bento-featured-inner">
+            <span class="bento-badge">New Release</span>
+            <h3>The Man Who Cracked the Code of Story</h3>
+            <p>The former BBC drama chief reveals why every story ever told follows the same hidden structure.</p>
+            <span class="bento-meta">with John Yorke &middot; 26 March 2026</span>
           </div>
-          <div class="episode-listen">
-            <a href="episodes.html">Listen &rarr;</a>
-          </div>
-        </div>
-        <div class="episode-card">
-          <span class="episode-number">02</span>
-          <div class="episode-info">
-            <h3><a href="episodes.html">The Biographer They Tried to Silence</a></h3>
-            <p class="episode-guest">with Andrew Lownie</p>
-            <p class="episode-desc">Award-winning biographer Andrew Lownie spent years fighting the British establishment in court to tell a story they didn't want told. This is what he learned about power, truth and persistence.</p>
-          </div>
-          <div class="episode-listen">
-            <a href="episodes.html">Listen &rarr;</a>
-          </div>
-        </div>
-        <div class="episode-card">
-          <span class="episode-number">03</span>
-          <div class="episode-info">
-            <h3><a href="episodes.html">Given 24 Hours to Live. She Had Other Plans</a></h3>
-            <p class="episode-guest">with Charlie Webster</p>
-            <p class="episode-desc">Broadcaster and athlete Charlie Webster contracted a near-fatal disease during the Rio Olympics and was told she might not survive. She did &mdash; and rebuilt herself by rethinking the story she was living.</p>
-          </div>
-          <div class="episode-listen">
-            <a href="episodes.html">Listen &rarr;</a>
-          </div>
+        </a>
+        <!-- Side cards -->
+        <div class="bento-side">
+          <a href="episodes.html" class="bento-card">
+            <span class="label">Episode 02</span>
+            <h4>The Biographer They Tried to Silence</h4>
+            <p>Andrew Lownie fought the British establishment in court to tell a story they didn't want told.</p>
+            <span class="bento-arrow">View details &rarr;</span>
+          </a>
+          <a href="episodes.html" class="bento-card">
+            <span class="label">Episode 03</span>
+            <h4>Given 24 Hours to Live. She Had Other Plans</h4>
+            <p>Charlie Webster rebuilt herself by rethinking the story she was living.</p>
+            <span class="bento-arrow">View details &rarr;</span>
+          </a>
         </div>
       </div>
     </div>
