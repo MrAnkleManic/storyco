@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StoryCo — The Digital Curator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary": "#ddb7ff",
+                        "on-secondary-container": "#d6a9ff",
+                        "primary": "#f1c97d",
+                        "on-surface-variant": "#d0c5af",
+                        "error": "#ffb4ab",
+                        "tertiary": "#dac6f0",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "surface-container-lowest": "#0e0e0f",
+                        "surface-container-high": "#2a2a2b",
+                        "surface-container-highest": "#353436",
+                        "primary-fixed": "#ffdea5",
+                        "primary-container": "#d4ad65",
+                        "tertiary-fixed-dim": "#d2bfe8",
+                        "background": "#131314",
+                        "on-background": "#e5e2e3",
+                        "on-primary-fixed-variant": "#5d4201",
+                        "on-tertiary": "#382a4a",
+                        "on-primary-container": "#5b4000",
+                        "inverse-surface": "#e5e2e3",
+                        "surface-tint": "#e9c176",
+                        "on-error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "inverse-primary": "#775a19",
+                        "outline-variant": "#4d4635",
+                        "on-primary-fixed": "#261900",
+                        "secondary-container": "#6f00be",
+                        "secondary-fixed": "#f0dbff",
+                        "on-surface": "#e5e2e3",
+                        "surface-variant": "#353436",
+                        "on-tertiary-container": "#4d3e60",
+                        "on-secondary": "#490080",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#2c0051",
+                        "surface-container-low": "#1c1b1c",
+                        "error-container": "#93000a",
+                        "outline": "#99907c",
+                        "surface-dim": "#131314",
+                        "on-primary": "#412d00",
+                        "tertiary-container": "#beabd3",
+                        "on-tertiary-fixed": "#221534",
+                        "primary-fixed-dim": "#e9c176",
+                        "inverse-on-surface": "#313031",
+                        "surface-container": "#201f20",
+                        "surface": "#131314",
+                        "tertiary-fixed": "#eddcff",
+                        "surface-bright": "#39393a",
+                        "on-tertiary-fixed-variant": "#4f4062"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #131314; color: #e5e2e3; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(19, 19, 20, 0.8); backdrop-filter: blur(20px); }
+        .gold-gradient { background: linear-gradient(135deg, #f1c97d 0%, #d4ad65 100%); }
+        .text-glow { text-shadow: 0 0 15px rgba(241, 201, 125, 0.3); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 w-full bg-neutral-900/80 backdrop-blur-xl shadow-xl shadow-black/20">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-amber-400 dark:text-amber-200 cursor-pointer transition-all scale-95 active:opacity-80" data-icon="menu">menu</span>
+<span class="text-2xl font-serif italic text-transparent bg-clip-text bg-gradient-to-br from-[#f1c97d] to-[#d4ad65] tracking-tight">StoryCo</span>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-outline-variant/15 overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Minimalist user profile avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvCDfm2ImGEKpJqQLvDUbvHnbjodDvRwQqcxLtYBFytagaIZPzpBOa-psuUj_soctfb349ldcbk9vrSvTxsdvt3jX7Us8_3cj7V4ZfBYUh7ivHtstYGk_QDUQtk1y5dPhuEFZ170n6BufTIlGG0npEYpG6epG18gJWpaq1utXfSfdAhwJwBdUlq2GbO2poG2Dp1qTFNOzPT7lcUacGXw9k0oJkhiRlz7RWXDDM4OluyfchvABvccrM4Xqu37rABfSFpMfKbLzAYmU"/>
+</div>
+</div>
+</header>
+<main class="pt-16 pb-24 overflow-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex flex-col justify-end px-6 pb-12 overflow-hidden">
+<!-- Hero Artwork Background -->
+<div class="absolute inset-0 z-0">
+<img alt="Main Character Artwork" class="w-full h-full object-cover opacity-60 scale-105" data-alt="Cinematic close-up portrait of main narrative character" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeu1bgLiU5ABmMeGNJoei3AO8tAZX9PjIJceK6bqOzltKeW3m0GQygc9hVGwcfHhTKPc3pyvnCsA3dMtmwHy8xH4lqabfAULIZtGJpqJskiUevP6aeHJaNcKpC6BSNuQ3QyRIakDxvqkS4sgc3FG53SJYW_MFJmbKusTCg-9PQkbneotlrbM1c9RWJmWDPVOgGjLE8i_8bqfB_GBOz3J99TApLCAbEPDotcD8ty_HhsdNl6xBYwaiJvCImJx802MNmjkls8y-2sqA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent"></div>
+<!-- Neon Glow Accents -->
+<div class="absolute top-1/4 -right-20 w-64 h-64 bg-secondary/10 blur-[100px] rounded-full"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 max-w-2xl space-y-6">
+<div class="space-y-2">
+<img alt="StoryCo Logo" class="h-12 w-auto object-contain" data-alt="Elegant StoryCo typographic logo in gold" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB39-k1ghCnzFLcWJAuVFsJ6EIGc12W7SrKkBxCVHyAd0lBNk_SNIW6dqvNUu5Bt4zx4geIXZCVYESmX2vgAoazTJSGg8yhaD_3Q7B6rIkU17qeTvraxHdVYCYVAnf1_txQwrMHHP_4t7qD_2uxpQGLpjGh9fx9ZEL55cxDvM5fLggGPDEGat07pUgWcdZEU3pvql4Vv3z4yNoJYg_ot1EGe9teK1XY0ZrzpSnoA-1jCkL2Q3h1vqJ4FvNmjuZhndN4CUHbnbfVy70"/>
+<img alt="With James Kirkham" class="h-4 w-auto object-contain opacity-80" data-alt="Sub-header text asset saying With James Kirkham" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc3linfOioE70L1GHRf7y6MzWDF_ZQ5i532AlGv6tGoCdlQX3L-Tt4Dv0QpZ4-DrQApGFLUB3IUPyaYOn2PiSdmIffxlvef7rT1-1M7d1Gh2Ps0bVmRvoxfvUT02R-k1_QLH1ta81Ok7PGzkz3USkN5Y9vNI3nf2sSN7DEZsPCm-D3PkcH0_vfSSQySD81CwRQ9WhRnpg-UfvZK9nUKv7BFEB_IBaxYMXoWCiOpcQz7ciEA-_1L4VCdKQCSlhrPBTq2i8JngMJslI"/>
+</div>
+<h1 class="font-headline text-3xl md:text-5xl font-bold leading-tight tracking-tight text-on-surface">
+                    The defining currency <br/><span class="italic text-primary">of the modern economy.</span>
+</h1>
+<p class="font-body text-on-surface-variant text-lg leading-relaxed max-w-md">
+                    In an age where our machines can make almost anything, the most valuable thing left is the oldest human instinct. StoryCo meets the people proving that story isn't a soft skill — it's the defining currency of the modern economy.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="gold-gradient text-on-primary font-bold px-8 py-4 rounded-md shadow-lg shadow-primary/10 flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-95">
+<span class="material-symbols-outlined text-[20px]" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                        Listen Now
+                    </button>
+<button class="bg-surface-container-high border border-primary/30 text-primary font-bold px-8 py-4 rounded-md flex items-center justify-center transition-all hover:bg-surface-bright">
+                        Browse Episodes
+                    </button>
+</div>
+</div>
+</section>
+<!-- Season One Grid -->
+<section class="px-6 py-20 bg-surface-container-low">
+<div class="flex justify-between items-end mb-12">
+<div class="space-y-1">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-primary/70">Series One</span>
+<h2 class="font-headline text-4xl font-bold text-on-surface">Episodes</h2>
+</div>
+<div class="hidden md:block">
+<span class="text-on-surface-variant font-label italic">Explore all seasons</span>
+</div>
+</div>
+<!-- Bento-style Episode Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Main Featured Card -->
+<div class="md:col-span-8 group cursor-pointer">
+<div class="relative aspect-video rounded-xl overflow-hidden bg-surface-container-highest">
+<img alt="Featured Episode" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Dramatic scene from Season One episode highlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9rffSp_jcwmZFpek8ib0qZMOpZgBlSbPRFPMIamS2fGfimeM5DhMcssartGLxREAAap9Gm-NXzrbTsqrCObxByqUq9xvKrW_SLVhMBd4dBtJCCr2yhfQbjCwsjJ528HU_ZVomEGy1mXKZAyY3hgld_rTd2fdPBo9MF12FzdEYVHSBSsLTUWU699B9i92UzhRAL1UVKCG0ri8awbPscvABq9LyW2B1orQmQcARdnKmra-ToYcd9T5iyeJLzqKKwKN6DMPEaoc4zeU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="bg-primary/20 backdrop-blur-md text-primary px-3 py-1 rounded text-[10px] uppercase font-bold tracking-widest mb-3 inline-block">New Release</span>
+<h3 class="font-headline text-2xl font-bold text-white mb-2">The Architecture of Memory</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2 max-w-lg">How spatial storytelling is redefining the way we interact with digital history.</p>
+</div>
+</div>
+</div>
+<!-- Secondary Small Card -->
+<div class="md:col-span-4 space-y-6">
+<div class="bg-surface-container p-6 rounded-xl border-l-2 border-primary/40 group hover:bg-surface-bright transition-colors">
+<span class="text-primary text-[10px] font-bold tracking-widest uppercase">Episode 02</span>
+<h4 class="font-headline text-xl font-bold mt-2">Visual Explorations</h4>
+<p class="text-on-surface-variant text-sm mt-3 leading-relaxed">Defining the aesthetic language of the modern era.</p>
+<div class="mt-4 flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-wider">
+                            View details <span class="material-symbols-outlined text-[14px]" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border-l-2 border-outline-variant/30 group hover:bg-surface-bright transition-colors">
+<span class="text-on-surface-variant text-[10px] font-bold tracking-widest uppercase">Episode 01</span>
+<h4 class="font-headline text-xl font-bold mt-2">The Curator's Dilemma</h4>
+<p class="text-on-surface-variant text-sm mt-3 leading-relaxed">Where does human choice end and the machine begin?</p>
+<div class="mt-4 flex items-center gap-2 text-on-surface-variant text-xs font-bold uppercase tracking-wider">
+                            Listen <span class="material-symbols-outlined text-[14px]" data-icon="lock">lock</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Anthology Mid-Section (Asymmetric Layout) -->
+<section class="relative py-24 bg-background">
+<div class="absolute right-0 top-0 w-1/3 h-full bg-surface-container-lowest/50 -skew-x-6 transform translate-x-20"></div>
+<div class="relative container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1">
+<div class="relative inline-block">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary/5 blur-3xl rounded-full"></div>
+<h2 class="font-headline text-5xl font-bold italic text-primary leading-tight relative z-10">The Anthology</h2>
+<div class="h-1 w-24 gold-gradient mt-4"></div>
+</div>
+<p class="mt-10 font-serif text-2xl leading-relaxed text-on-surface italic opacity-90">
+                        "Beyond the audio, we curate a collection of artifacts, manuscripts, and visual explorations..."
+                    </p>
+<p class="mt-6 text-on-surface-variant leading-relaxed text-lg">
+                        Each story is accompanied by a deep-dive into the creative process—uncovering the hidden textures and forgotten voices that shape our collective narrative.
+                    </p>
+<div class="mt-10 flex items-center gap-6">
+<div class="flex flex-col">
+<span class="font-headline text-3xl text-primary font-bold">14+</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Original Pieces</span>
+</div>
+<div class="w-px h-12 bg-outline-variant/30"></div>
+<div class="flex flex-col">
+<span class="font-headline text-3xl text-primary font-bold">500k</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Listen Hours</span>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="aspect-[4/5] bg-surface-container-high rounded-sm shadow-2xl overflow-hidden relative group">
+<img alt="Artifact Collection" class="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-1000" data-alt="Close up collage of ancient manuscripts and digital screens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBALF7k5MKVft6y_GUpNK5scqxJPZ4Qa30M54_MV0DjyJfWNskqWaXJu_tdgEUiyzskVr6yFBe6wrSLDKJYCOxf-fHM2MH58j5fc_OrpNWiM5AUqdue-kwQcsh3LQW5L3AT-_tpscrAus7ICjoEni1jKBdhMirTD9gHrNMCtSHA1yxM_PLcFHXIK6tNAHQybyUrOMfJWCFyCbIHNZWj3L8rd6W5_NLdkAOtMwieXzwe4Ff1uRImSTmzKwT9GjA1HOHNzXl9-GNDNKY"/>
+<div class="absolute inset-0 ring-1 ring-inset ring-white/10"></div>
+</div>
+<!-- Overlapping element -->
+<div class="absolute -bottom-6 -left-6 bg-surface-container-highest p-4 shadow-2xl hidden md:block">
+<p class="font-label text-[10px] tracking-tighter uppercase text-primary border-b border-primary/20 pb-2 mb-2">Accession No. 2024.01</p>
+<p class="text-[12px] italic text-on-surface-variant">Archived artifacts from the kirkham collection.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Subscription / Inner Circle Section -->
+<section class="px-6 py-20 bg-surface-container-highest relative overflow-hidden">
+<div class="absolute inset-0 bg-primary/5 opacity-30"></div>
+<div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
+<span class="material-symbols-outlined text-primary text-5xl opacity-50" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-surface">Join the Inner Circle</h2>
+<p class="text-on-surface-variant text-lg max-w-xl mx-auto leading-relaxed">
+                    Exclusive early access, private community dialogues, and a weekly dispatch on the state of global storytelling.
+                </p>
+<form class="flex flex-col md:flex-row gap-0 max-w-lg mx-auto overflow-hidden rounded-lg">
+<input class="flex-grow bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary text-on-surface p-4 placeholder:text-on-surface-variant/30" placeholder="curator@example.com" type="email"/>
+<button class="gold-gradient text-on-primary font-bold px-8 py-4 transition-all hover:brightness-110 active:scale-95" type="submit">
+                        Subscribe
+                    </button>
+</form>
+<p class="text-[10px] uppercase tracking-widest text-outline">Privacy curated. No spam ever.</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-8 px-4 bg-neutral-900/90 backdrop-blur-2xl z-50 rounded-t-xl shadow-[0_-10px_30px_rgba(0,0,0,0.5)] border-t border-white/5 md:hidden">
+<a class="flex flex-col items-center justify-center text-amber-400 drop-shadow-[0_0_8px_rgba(241,201,125,0.4)] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="explore" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-sans uppercase tracking-[0.15em] text-[10px] font-bold mt-1">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 active:scale-90 duration-200 hover:text-neutral-200" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="subscriptions">subscriptions</span>
+<span class="font-sans uppercase tracking-[0.15em] text-[10px] font-bold mt-1">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 active:scale-90 duration-200 hover:text-neutral-200" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="mic_none">mic_none</span>
+<span class="font-sans uppercase tracking-[0.15em] text-[10px] font-bold mt-1">Create</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-500 active:scale-90 duration-200 hover:text-neutral-200" href="#">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+<span class="font-sans uppercase tracking-[0.15em] text-[10px] font-bold mt-1">Profile</span>
+</a>
+</nav>
+<!-- FAB (Suppressed on details, shown only for quick action on main) -->
+<div class="fixed bottom-24 right-6 z-40 hidden sm:block">
+<button class="w-14 h-14 rounded-full gold-gradient shadow-2xl flex items-center justify-center text-on-primary transition-transform hover:rotate-12">
+<span class="material-symbols-outlined text-2xl" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</button>
+</div>
+</body></html>
