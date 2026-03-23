@@ -282,14 +282,11 @@ section + section {
 
   .hero-bg img {
     object-position: center top;
+    transform: none;
   }
 
   .hero-logo-overlay {
-    width: 60vw;
-    top: 12%;
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    display: none;
   }
 
   .hero-gradient-left {
