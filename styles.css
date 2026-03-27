@@ -200,10 +200,10 @@ section + section {
 /* Text overlay layer (logo + name via mix-blend-mode) */
 .hero-logo-overlay {
   position: absolute;
-  top: clamp(10%, 22vw, 28%);
+  top: clamp(4rem, 12vh, 10rem);
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: clamp(280px, 45vw, 600px);
+  transform: translateX(-50%);
+  width: clamp(280px, 40vw, 550px);
   height: auto;
   z-index: 2;
   mix-blend-mode: screen;
